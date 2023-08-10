@@ -4,11 +4,6 @@ import { type } from "os";
 import { useRef, useEffect, useState } from "react";
 import type { ImgHTMLAttributes } from "react";
 
-type LazyProps = { image: string; alt: string };
-type ImageNative = ImgHTMLAttributes<HTMLImageElement>;
-
-type Props = LazyProps & ImageNative;
-
 export const LazyImage = ({ image, alt, ...imgProps }: Props): JSX.Element => {
   const [src, setsrc] = useState<string>(
     "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
